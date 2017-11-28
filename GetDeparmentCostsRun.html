@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.2.0.min.js"></script>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            font-size: 10px;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a, .dropbtn {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover, .dropdown:hover .dropbtn {
+            background-color: #9a9695;
+        }
+
+        li.dropdown {
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {background-color: #f1f1f1}
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        body{
+            background-color: aliceblue;
+        }
+        #wrap {
+            float: left;
+            position: relative;
+            left: 50%;
+        }
+
+        #content {
+            float: left;
+            position: relative;
+            left: -50%;
+        }
+    </style>
+</head>
+<body onload="loadFile();">
+
+<ul>
+    <li><a href="ReadMe.html">Read Me</a></li>
+    <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Get Employee</a>
+        <div class="dropdown-content">
+            <a href="GetEmployeeWarmUp.html">Warm Up</a>
+            <a href="GetEmployeeRun.html">Run</a>
+        </div>
+    </li>
+    <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Get Department Cost</a>
+        <div class="dropdown-content">
+            <a href="GetDeparmentCostWarmUp.html">Warm Up</a>
+            <a href="GetDeparmentCostsRun.html">Run</a>
+        </div>
+    </li>
+    <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Get Top N Salaries</a>
+        <div class="dropdown-content">
+            <a href="GetTopNSalariesWarmUp.html">Warm Up</a>
+            <a href="GetEmployeeRun.html.html">Run</a>
+        </div>
+    </li>
+</ul>
+
+<div id="wrap">
+    <div id="content">
+        <canvas id="canvas" width="1000" height="500" style="float: left;"></canvas>
+    </div>
+</div>
+
+
+<table style="width:80%; float: left; margin-left: 10%;">
+    <tr>
+        <th>Sets</th>
+        <th id="1_1">1</th>
+        <th id="1_2">2</th>
+        <th id="1_3">3</th>
+        <th id="1_4">4</th>
+        <th id="1_5">5</th>
+        <th id="1_6">6</th>
+        <th id="1_7">7</th>
+        <th id="1_8">8</th>
+        <th id="1_9">9</th>
+        <th id="1_10">10</th>
+    </tr>
+    <tr>
+        <th>Set 1</th>
+        <th id="0">1</th>
+        <th id="1">2</th>
+        <th id="2">3</th>
+        <th id="3">4</th>
+        <th id="4">5</th>
+        <th id="5">6</th>
+        <th id="6">7</th>
+        <th id="7">8</th>
+        <th id="8">9</th>
+        <th id="9">10</th>
+    </tr>
+    <tr>
+        <th>Set 2</th>
+        <th id="10">11</th>
+        <th id="11">12</th>
+        <th id="12">13</th>
+        <th id="13">14</th>
+        <th id="14">15</th>
+        <th id="15">16</th>
+        <th id="16">17</th>
+        <th id="17">18</th>
+        <th id="18">19</th>
+        <th id="19">20</th>
+    </tr>
+    <tr>
+        <th>Set 3</th>
+        <th id="20">1</th>
+        <th id="21">2</th>
+        <th id="22">3</th>
+        <th id="23">4</th>
+        <th id="24">5</th>
+        <th id="25">6</th>
+        <th id="26">7</th>
+        <th id="27">8</th>
+        <th id="28">9</th>
+        <th id="29">10</th>
+    </tr>
+    <tr>
+        <th>Set 4</th>
+        <th id="30">11</th>
+        <th id="31">12</th>
+        <th id="32">13</th>
+        <th id="33">14</th>
+        <th id="34">15</th>
+        <th id="35">16</th>
+        <th id="36">17</th>
+        <th id="37">18</th>
+        <th id="38">19</th>
+        <th id="39">20</th>
+    </tr>
+    <tr>
+        <th>Diff</th>
+        <th id="Total_0">0</th>
+        <th id="Total_1">1</th>
+        <th id="Total_2">2</th>
+        <th id="Total_3">3</th>
+        <th id="Total_4">4</th>
+        <th id="Total_5">5</th>
+        <th id="Total_6">6</th>
+        <th id="Total_7">7</th>
+        <th id="Total_8">8</th>
+        <th id="Total_9">9</th>
+    </tr>
+</table>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.1/Chart.bundle.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+    //var uneditedText;
+    var runs = [];
+    var testing123 = "";
+    function loadFile() {
+        $.ajax({
+            url: "log.txt",
+            dataType: "text",
+            success: function (data) {
+                $(".text").html(data);
+                var uneditedText = data;
+                //console.log(uneditedText);
+                splitting(uneditedText);
+            }
+        });
+
+
+    }
+
+    function splitting(unsplitText) {
+        var str = unsplitText;
+        var res = str.split("\n");
+        for(var h = 0; h< res.length; h++){
+            console.log(res[h]);
+        }
+        var x = 0;
+        var regx = /^Iteration  [\d: ][\d|:][:| ][ :\d]\d+.\d+ ns[/\//ig]op/i;
+        for(var i = 0; i < 87; i++){
+            if(regx.test(res[i])){
+                console.log("testing  " + i);
+                var splitString = res[i].split(" ");
+                for(var k = 0; k< splitString.length; k++){
+                    console.log("----------------------- " + splitString[k] + "--------- " +splitString.length);
+                }
+                runs[x] = splitString[splitString.length -2];
+                console.log("- " + runs[x]+ "- " + x);
+                x++;
+            }else {
+                console.log("sorry " + i);
+            }
+        };
+//        for(var y = 0; y < runs.length; y++) {
+//            console.log(runs[y]);
+//        }
+        graphs(runs);
+//        //testing123 = runs[5];
+////        document.getElementById("p1").innerHTML = testing123;
+        document.getElementById("1").innerHTML = runs[0];
+        for(var e = 0; e<runs.length; e++){
+            document.getElementById(""+ e).innerHTML = runs[e];
+        }
+        for(var r = 0; r<10; r++){
+            var temparray = [runs[r],runs[r+10],runs[r+20],runs[r+30]];
+            temparray.sort();
+            var output = (temparray[3] - temparray[0]).toFixed(3);
+            document.getElementById("Total_"+ r).innerHTML = output;
+        }
+        var tablOutput = res[res.length].split(" ");
+
+        document.getElementById("Res_0").innerHTML = tablOutput[res.length-3];
+        document.getElementById("Res_1").innerHTML = res[res.length-2];
+    }
+
+
+
+
+    function graphs(runings) {
+        console.log("fgsd++ " + runings.length);
+        var config = {
+            type: 'line',
+            data: {
+                labels: ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+                datasets: [{
+                    label: "1st Run",
+                    fill: false,
+                    backgroundColor: "green",
+                    borderColor: "green",
+                    data: [runings[0], runings[1], runings[2], runings[3], runings[4], runings[5], runings[6], runings[7], runings[8], runings[9]]
+                }, {
+                    label: "2nd Run",
+                    fill: false,
+                    backgroundColor: "blue",
+                    borderColor: "blue",
+                    data: [runings[10], runings[11], runings[12], runings[13], runings[14], runings[15], runings[16], runings[17], runings[18], runings[19]]
+                }, {
+                    label: "3rd Run",
+                    fill: false,
+                    backgroundColor: "red",
+                    borderColor: "red",
+                    data: [runings[20], runings[21], runings[22], runings[23], runings[24], runings[25], runings[26], runings[27], runings[28], runings[29]]
+                }, {
+                    label: "4th Run",
+                    fill: false,
+                    backgroundColor: "orange",
+                    borderColor: "orange",
+                    data: [runings[30], runings[31], runings[32], runings[33], runings[34], runings[35], runings[36], runings[37], runings[38], runings[39]]
+                }]
+            },
+
+            options: {
+                responsive: false,
+                legend: {
+                    position: 'bottom',
+                },
+                hover: {
+                    mode: 'label'
+                },
+                scales: {
+                    xAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Runs'
+                        }
+                    }],
+                    yAxes: [{
+                        display: true,
+                        ticks: {
+                            beginAtZero: false,
+                            min: 200000,
+                            steps: 10,
+                            stepValue: 5,
+                            max: 600000
+                        }
+                    }]
+                },
+                title: {
+                    display: true,
+                    text: 'Run results chart'
+                }
+            }
+        };
+
+        var ctx = document.getElementById("canvas").getContext("2d");
+        new Chart(ctx, config);
+        var text = runs[5].toString();
+    }
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

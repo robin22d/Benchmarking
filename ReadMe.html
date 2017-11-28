@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.2.0.min.js"></script>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            font-size: 10px;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a, .dropbtn {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover, .dropdown:hover .dropbtn {
+            background-color: #9a9695;
+        }
+
+        li.dropdown {
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {background-color: #f1f1f1}
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        body{
+            background-color: aliceblue;
+        }
+        #wrap {
+            float: left;
+            position: relative;
+            left: 50%;
+        }
+
+        #content {
+            float: left;
+            position: relative;
+            left: -50%;
+        }
+    </style>
+</head>
+<body onload="loadFile();">
+
+<ul>
+    <li><a href="ReadMe.html">Read Me</a></li>
+    <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Get Employee</a>
+        <div class="dropdown-content">
+            <a href="GetEmployeeWarmUp.html">Warm Up</a>
+            <a href="GetEmployeeRun.html">Run</a>
+        </div>
+    </li>
+    <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Get Department Cost</a>
+        <div class="dropdown-content">
+            <a href="GetDeparmentCostWarmUp.html">Warm Up</a>
+            <a href="GetDeparmentCostsRun.html">Run</a>
+        </div>
+    </li>
+    <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Get Top N Salaries</a>
+        <div class="dropdown-content">
+            <a href="GetTopNSalariesWarmUp.html">Warm Up</a>
+            <a href="GetEmployeeRun.html.html">Run</a>
+        </div>
+    </li>
+</ul>
+<br/>
+** graphs on work on firefox!! **
+<br/>
+<p>
+    <b>How to benchmark the code:</b>
+    <br/>
+    1. Go to the console and change to the
+    <br/>
+    > cvs-maven folder
+    <br/>
+    2. To build the project type
+    <br/>
+    > mvn clean install
+    <br/>
+    3. To run the project type
+    <br/>
+    > java -jar target/benchmarks.jar > log.txt
+    <br/>
+    4. To get the benchmarks to show in the console type
+    <br/>
+    > java -jar target/benchmarks.jar
+</p>
+
+</body>
+</html>

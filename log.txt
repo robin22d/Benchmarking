@@ -1,0 +1,276 @@
+# JMH 1.17.4 (released 103 days ago)
+# VM version: JDK 1.8.0_121, VM 25.121-b13
+# VM invoker: /usr/lib/jvm/java-8-oracle/jre/bin/java
+# VM options: <none>
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.chip.CSV.GetDepartmentCostCall
+
+# Run progress: 0.00% complete, ETA 00:03:00
+# Fork: 1 of 4
+# Warmup Iteration   1: 375926.606 ns/op
+# Warmup Iteration   2: 330369.484 ns/op
+# Warmup Iteration   3: 331037.209 ns/op
+# Warmup Iteration   4: 324244.331 ns/op
+# Warmup Iteration   5: 321445.900 ns/op
+Iteration   1: 322951.182 ns/op
+Iteration   2: 321125.268 ns/op
+Iteration   3: 323343.955 ns/op
+Iteration   4: 322608.677 ns/op
+Iteration   5: 324233.981 ns/op
+Iteration   6: 324121.556 ns/op
+Iteration   7: 327310.900 ns/op
+Iteration   8: 326456.870 ns/op
+Iteration   9: 324192.092 ns/op
+Iteration  10: 325024.515 ns/op
+
+# Run progress: 8.33% complete, ETA 00:02:50
+# Fork: 2 of 4
+# Warmup Iteration   1: 380179.190 ns/op
+# Warmup Iteration   2: 334717.780 ns/op
+# Warmup Iteration   3: 337157.952 ns/op
+# Warmup Iteration   4: 327763.259 ns/op
+# Warmup Iteration   5: 329274.126 ns/op
+Iteration   1: 327300.139 ns/op
+Iteration   2: 329213.440 ns/op
+Iteration   3: 327691.311 ns/op
+Iteration   4: 326473.292 ns/op
+Iteration   5: 327689.958 ns/op
+Iteration   6: 326730.071 ns/op
+Iteration   7: 330066.850 ns/op
+Iteration   8: 331584.705 ns/op
+Iteration   9: 332248.951 ns/op
+Iteration  10: 331854.454 ns/op
+
+# Run progress: 16.67% complete, ETA 00:02:34
+# Fork: 3 of 4
+# Warmup Iteration   1: 383976.334 ns/op
+# Warmup Iteration   2: 337165.989 ns/op
+# Warmup Iteration   3: 331912.143 ns/op
+# Warmup Iteration   4: 328222.432 ns/op
+# Warmup Iteration   5: 326461.373 ns/op
+Iteration   1: 327757.821 ns/op
+Iteration   2: 327450.243 ns/op
+Iteration   3: 327393.426 ns/op
+Iteration   4: 327886.670 ns/op
+Iteration   5: 331829.157 ns/op
+Iteration   6: 330377.217 ns/op
+Iteration   7: 329344.007 ns/op
+Iteration   8: 334864.284 ns/op
+Iteration   9: 330710.136 ns/op
+Iteration  10: 331909.325 ns/op
+
+# Run progress: 25.00% complete, ETA 00:02:18
+# Fork: 4 of 4
+# Warmup Iteration   1: 384964.954 ns/op
+# Warmup Iteration   2: 333713.384 ns/op
+# Warmup Iteration   3: 338846.904 ns/op
+# Warmup Iteration   4: 327799.422 ns/op
+# Warmup Iteration   5: 327433.003 ns/op
+Iteration   1: 326069.995 ns/op
+Iteration   2: 329274.786 ns/op
+Iteration   3: 328941.567 ns/op
+Iteration   4: 327767.085 ns/op
+Iteration   5: 329364.121 ns/op
+Iteration   6: 328512.398 ns/op
+Iteration   7: 330052.846 ns/op
+Iteration   8: 331066.639 ns/op
+Iteration   9: 331116.708 ns/op
+Iteration  10: 332183.067 ns/op
+
+
+Result "org.chip.CSV.GetDepartmentCostCall":
+  328152.342 ±(99.9%) 1746.804 ns/op [Average]
+  (min, avg, max) = (321125.268, 328152.342, 334864.284), stdev = 3104.943
+  CI (99.9%): [326405.537, 329899.146] (assumes normal distribution)
+
+
+# JMH 1.17.4 (released 103 days ago)
+# VM version: JDK 1.8.0_121, VM 25.121-b13
+# VM invoker: /usr/lib/jvm/java-8-oracle/jre/bin/java
+# VM options: <none>
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.chip.CSV.GetEmployeeCall
+
+# Run progress: 33.33% complete, ETA 00:02:02
+# Fork: 1 of 4
+# Warmup Iteration   1: 303.960 ns/op
+# Warmup Iteration   2: 267.503 ns/op
+# Warmup Iteration   3: 260.218 ns/op
+# Warmup Iteration   4: 257.718 ns/op
+# Warmup Iteration   5: 259.681 ns/op
+Iteration   1: 259.054 ns/op
+Iteration   2: 259.783 ns/op
+Iteration   3: 257.688 ns/op
+Iteration   4: 258.848 ns/op
+Iteration   5: 262.030 ns/op
+Iteration   6: 262.599 ns/op
+Iteration   7: 260.602 ns/op
+Iteration   8: 262.189 ns/op
+Iteration   9: 261.010 ns/op
+Iteration  10: 262.081 ns/op
+
+# Run progress: 41.67% complete, ETA 00:01:47
+# Fork: 2 of 4
+# Warmup Iteration   1: 305.208 ns/op
+# Warmup Iteration   2: 277.040 ns/op
+# Warmup Iteration   3: 265.588 ns/op
+# Warmup Iteration   4: 267.513 ns/op
+# Warmup Iteration   5: 265.186 ns/op
+Iteration   1: 270.153 ns/op
+Iteration   2: 267.095 ns/op
+Iteration   3: 268.138 ns/op
+Iteration   4: 268.083 ns/op
+Iteration   5: 270.510 ns/op
+Iteration   6: 271.710 ns/op
+Iteration   7: 270.568 ns/op
+Iteration   8: 269.706 ns/op
+Iteration   9: 274.392 ns/op
+Iteration  10: 270.102 ns/op
+
+# Run progress: 50.00% complete, ETA 00:01:32
+# Fork: 3 of 4
+# Warmup Iteration   1: 305.603 ns/op
+# Warmup Iteration   2: 269.731 ns/op
+# Warmup Iteration   3: 261.036 ns/op
+# Warmup Iteration   4: 260.565 ns/op
+# Warmup Iteration   5: 262.756 ns/op
+Iteration   1: 262.327 ns/op
+Iteration   2: 261.916 ns/op
+Iteration   3: 260.504 ns/op
+Iteration   4: 260.282 ns/op
+Iteration   5: 264.068 ns/op
+Iteration   6: 262.190 ns/op
+Iteration   7: 265.367 ns/op
+Iteration   8: 263.991 ns/op
+Iteration   9: 261.503 ns/op
+Iteration  10: 262.704 ns/op
+
+# Run progress: 58.33% complete, ETA 00:01:16
+# Fork: 4 of 4
+# Warmup Iteration   1: 300.302 ns/op
+# Warmup Iteration   2: 271.628 ns/op
+# Warmup Iteration   3: 260.789 ns/op
+# Warmup Iteration   4: 262.397 ns/op
+# Warmup Iteration   5: 261.654 ns/op
+Iteration   1: 262.904 ns/op
+Iteration   2: 263.391 ns/op
+Iteration   3: 261.959 ns/op
+Iteration   4: 263.421 ns/op
+Iteration   5: 262.255 ns/op
+Iteration   6: 264.891 ns/op
+Iteration   7: 262.368 ns/op
+Iteration   8: 267.590 ns/op
+Iteration   9: 262.687 ns/op
+Iteration  10: 261.862 ns/op
+
+
+Result "org.chip.CSV.GetEmployeeCall":
+  264.113 ±(99.9%) 2.249 ns/op [Average]
+  (min, avg, max) = (257.688, 264.113, 274.392), stdev = 3.998
+  CI (99.9%): [261.864, 266.362] (assumes normal distribution)
+
+
+# JMH 1.17.4 (released 103 days ago)
+# VM version: JDK 1.8.0_121, VM 25.121-b13
+# VM invoker: /usr/lib/jvm/java-8-oracle/jre/bin/java
+# VM options: <none>
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.chip.CSV.GetTopNSalariesCall
+
+# Run progress: 66.67% complete, ETA 00:01:01
+# Fork: 1 of 4
+# Warmup Iteration   1: 495659.085 ns/op
+# Warmup Iteration   2: 404091.924 ns/op
+# Warmup Iteration   3: 397757.790 ns/op
+# Warmup Iteration   4: 397204.923 ns/op
+# Warmup Iteration   5: 399724.781 ns/op
+Iteration   1: 399143.466 ns/op
+Iteration   2: 395317.012 ns/op
+Iteration   3: 397996.223 ns/op
+Iteration   4: 401944.147 ns/op
+Iteration   5: 403155.552 ns/op
+Iteration   6: 401121.743 ns/op
+Iteration   7: 401959.231 ns/op
+Iteration   8: 408229.744 ns/op
+Iteration   9: 401262.422 ns/op
+Iteration  10: 402927.104 ns/op
+
+# Run progress: 75.00% complete, ETA 00:00:45
+# Fork: 2 of 4
+# Warmup Iteration   1: 474366.844 ns/op
+# Warmup Iteration   2: 400997.358 ns/op
+# Warmup Iteration   3: 396943.147 ns/op
+# Warmup Iteration   4: 396433.681 ns/op
+# Warmup Iteration   5: 400433.558 ns/op
+Iteration   1: 396309.180 ns/op
+Iteration   2: 400094.686 ns/op
+Iteration   3: 399907.103 ns/op
+Iteration   4: 400335.920 ns/op
+Iteration   5: 403205.085 ns/op
+Iteration   6: 401141.431 ns/op
+Iteration   7: 404042.742 ns/op
+Iteration   8: 404058.753 ns/op
+Iteration   9: 400538.153 ns/op
+Iteration  10: 402441.265 ns/op
+
+# Run progress: 83.33% complete, ETA 00:00:30
+# Fork: 3 of 4
+# Warmup Iteration   1: 466062.326 ns/op
+# Warmup Iteration   2: 400209.893 ns/op
+# Warmup Iteration   3: 395404.058 ns/op
+# Warmup Iteration   4: 396500.921 ns/op
+# Warmup Iteration   5: 393851.520 ns/op
+Iteration   1: 394038.138 ns/op
+Iteration   2: 402981.293 ns/op
+Iteration   3: 396581.476 ns/op
+Iteration   4: 397083.523 ns/op
+Iteration   5: 402767.824 ns/op
+Iteration   6: 404580.947 ns/op
+Iteration   7: 398810.601 ns/op
+Iteration   8: 399015.580 ns/op
+Iteration   9: 396038.567 ns/op
+Iteration  10: 397777.272 ns/op
+
+# Run progress: 91.67% complete, ETA 00:00:15
+# Fork: 4 of 4
+# Warmup Iteration   1: 455783.263 ns/op
+# Warmup Iteration   2: 401817.784 ns/op
+# Warmup Iteration   3: 395006.657 ns/op
+# Warmup Iteration   4: 388403.040 ns/op
+# Warmup Iteration   5: 387964.306 ns/op
+Iteration   1: 387497.309 ns/op
+Iteration   2: 386223.224 ns/op
+Iteration   3: 389089.482 ns/op
+Iteration   4: 385911.142 ns/op
+Iteration   5: 395293.798 ns/op
+Iteration   6: 387697.639 ns/op
+Iteration   7: 389434.361 ns/op
+Iteration   8: 393434.963 ns/op
+Iteration   9: 390879.389 ns/op
+Iteration  10: 393591.432 ns/op
+
+
+Result "org.chip.CSV.GetTopNSalariesCall":
+  397846.473 ±(99.9%) 3165.495 ns/op [Average]
+  (min, avg, max) = (385911.142, 397846.473, 408229.744), stdev = 5626.664
+  CI (99.9%): [394680.978, 401011.968] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:03:03
+
+Benchmark                  Mode  Cnt       Score      Error  Units
+CSV.GetDepartmentCostCall  avgt   40  328152.342 ± 1746.804  ns/op
+CSV.GetEmployeeCall        avgt   40     264.113 ±    2.249  ns/op
+CSV.GetTopNSalariesCall    avgt   40  397846.473 ± 3165.495  ns/op
