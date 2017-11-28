@@ -12,5 +12,5 @@
 > java -jar target/benchmarks.jar > log.txt 
 4. To get the benchmarks to show in the console type 
 > java -jar target/benchmarks.jar
-5. Go to html page to see that out of the benchmarks
+5. Go to html page to see that output of the benchmarks
 > file:///C:/Users/*YOUR_FILE_PATH*/Benchmarking/GetEmployeeWarmUp.html
