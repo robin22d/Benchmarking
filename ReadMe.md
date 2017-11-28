@@ -1,7 +1,7 @@
 
 # Benchamrking
 
-** graphs on work on firefox!! ** 
+** graphs only work on firefox!! ** 
 
 ## How to benchmark the code: 
 1. Go to the console and change to the 
